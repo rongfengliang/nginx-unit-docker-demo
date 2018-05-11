@@ -13,8 +13,7 @@ pipeline {
     }
     stage('docker run ') {
       steps {
-        sh 'docker run -d -p 9080:8080 -p 9000:8000 myunit
-'
+        sh 'docker run -d -p 9080:8080 -p 9000:8000 myunit'
       }
     }
     stage('deploy service') {
