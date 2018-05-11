@@ -2,6 +2,9 @@
     "listeners":{
         "*:8080":{
             "application":"phpindex"
+        },
+        "*:8081":{
+            "application":"golang"
         }
     },
     "applications":{
@@ -10,6 +13,12 @@
            "processes":30,
            "root":"/appdemo/website",
            "index":"index.php"
-        }
+        },
+        "golang":{
+            "type":"go",
+            "processes":30,
+            "working_directory": "/appdemo/website",
+            "executable": "appdemo"
+         }
     }
 }

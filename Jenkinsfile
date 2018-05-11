@@ -1,19 +1,18 @@
 pipeline {
   agent {
     node {
-      label 'docker-66'
+      label 'docker-65'
     }
-
   }
   stages {
-    stage('docker build') {
+    stage('docker-compose build') {
       steps {
-        sh 'docker build -t myunit .'
+        sh 'docker-compose build'
       }
     }
-    stage('docker run ') {
+    stage('docker-compose run ') {
       steps {
-        sh 'docker run -d -p 9080:8080 -p 9000:8000 myunit'
+        sh 'docker-compose up -d'
       }
     }
     stage('deploy service') {
