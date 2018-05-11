@@ -1,0 +1,9 @@
+version: "3"
+services: 
+  nginx-unit:
+    build:
+      context: .
+    image: myunit
+    ports: 
+     - "9080:8080"
+     - "9000:8000" 
