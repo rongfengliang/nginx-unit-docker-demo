@@ -1,0 +1,15 @@
+{
+    "listeners":{
+        "*:8080":{
+            "application":"phpindex"
+        }
+    },
+    "applications":{
+        "phpindex":{
+           "type":"php",
+           "processes":30,
+           "root":"/appdemo/website",
+           "index":"index.php"
+        }
+    }
+}
